@@ -1,0 +1,31 @@
+### ──────────────────────────────
+### Zsh Plugins
+### ──────────────────────────────
+
+
+# Basic-Plugins for Zsh
+zsh-users/zsh-autosuggestions
+# zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-completions
+
+
+# Fuzzy Finder
+Aloxaf/fzf-tab
+zdharma-continuum/fast-syntax-highlighting
+zsh-users/zsh-history-substring-search
+
+
+# Utility
+hlissner/zsh-autopair
+MichaelAquilina/zsh-auto-notify
+MichaelAquilina/zsh-you-should-use
+
+
+# Personal Preference
+jeffreytse/zsh-vi-mode
+rupa/z
+
+
+# GitHub Copilot
+Freed-Wu/fzf-tab-source
+loiccoyle/zsh-github-copilot
