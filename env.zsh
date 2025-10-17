@@ -31,3 +31,6 @@ export XDG_CURRENT_DESKTOP="sway"
 
 # ── Apply updated PATH ───────────
 export PATH
+
+# opencode
+export PATH=/home/leodora/.opencode/bin:$PATH
