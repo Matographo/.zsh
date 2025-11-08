@@ -2,12 +2,21 @@
 ### Plugin Management (Antidote)
 ### ──────────────────────────────
 
-
-# Load Antidote
-if [[ -f "${ZDOTDIR:-$HOME}/.antidote/antidote.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.antidote/antidote.zsh"
+# Detect Arch Linux
+if [[ -f /etc/arch-release ]]; then
+  # Arch installation path
+  if [[ -f /usr/share/zsh-antidote/antidote.zsh ]]; then
+    source /usr/share/zsh-antidote/antidote.zsh
+  else
+    echo "Antidote installiert, aber nicht gefunden: /usr/share/zsh-antidote/antidote.zsh"
+  fi
 else
-  echo "Antidote not found at ~/.antidote/antidote.zsh"
+  # Non-Arch (local Antidote installation)
+  if [[ -f "${ZDOTDIR:-$HOME}/.antidote/antidote.zsh" ]]; then
+    source "${ZDOTDIR:-$HOME}/.antidote/antidote.zsh"
+  else
+    echo "Antidote not found at ~/.antidote/antidote.zsh"
+  fi
 fi
 
 
@@ -18,7 +27,6 @@ compinit -u
 
 ZSH_PLUGIN_FILE="${ZDOTDIR:-$HOME}/.zsh/.zsh_plugins.zsh"
 ZSH_PLUGIN_LIST="${ZDOTDIR:-$HOME}/.zsh/zsh_plugins.txt"
-
 
 # Build and load plugin bundle
 if [[ -f "$ZSH_PLUGIN_LIST" ]]; then
